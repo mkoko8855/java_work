@@ -11,6 +11,7 @@ public class ScannerQuiz {
 		System.out.printf("이름이뭘까?");
 		String name = sc.nextLine();
 		System.out.printf("이름 : %s", name);
+		
 		System.out.println();
 		System.out.println("그럼 나이는?");
 		int age = sc.nextInt();
@@ -22,6 +23,7 @@ public class ScannerQuiz {
 		
 		int birth = 2023-age;
 		System.out.println("출생연도 : " + birth + "년");
+		
 		
 		/*
 		 System.out.print("이름 : ");

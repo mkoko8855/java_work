@@ -30,9 +30,6 @@ public class ScannerExample {
 		System.out.println("제 이름은 " + name + "이고, 나이는 " + age + "세 입니다.");
 		
 		
-		
-		
-		
 		// 4. Scanner 객체를 반납
 		// 객체를 반납 > Scanner를 메모리에서 해제.
 		sc.close();

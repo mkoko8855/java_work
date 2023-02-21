@@ -34,7 +34,6 @@ public class LogicalOperator {
 			
 			
 			
-			
 			//논리 반전 연산자 (! : 단항)
 			//단순히 논리값을 반전시킬 때 사용한다.
 			//true > false, false > true.

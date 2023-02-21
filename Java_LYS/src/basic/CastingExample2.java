@@ -26,7 +26,7 @@ public class CastingExample2 {
 		
 		double d = 4.98765;
 		int j =(int) d;
-		System.out.println(j);  //출력 결과 : 4
+		System.out.println(j);  //출력 결과 : 4(값손실)
 		
 		int k = 1000;
 		byte b =(byte)k;
