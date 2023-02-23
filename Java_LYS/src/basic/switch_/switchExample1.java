@@ -1,7 +1,6 @@
 package basic.switch_;
 
 import java.util.Scanner;
-import com.fast.Cw;
 
 public class switchExample1 {
 
@@ -29,14 +28,14 @@ public class switchExample1 {
 		case "ㅡ":
 		case "m":
 		case "M":
-			Cw.w("남자입니다.");
+			System.out.println("남자입니다.");
 			break; // 해당 case만 실행하고 switch문을 종료해라!
 		case "ㄹ":
 		case "f":
 		case "F":
-			Cw.w("여자입니다.");
+			System.out.println("여자입니다.");
 		default:
-			Cw.w("치지마라");
+			System.out.println("치지마라");
 			break;
 		}
 	}

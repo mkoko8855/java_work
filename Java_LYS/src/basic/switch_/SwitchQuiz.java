@@ -2,8 +2,6 @@ package basic.switch_;
 
 import java.util.Scanner;
 
-import com.fast.Cw;
-
 public class SwitchQuiz {
 
 	public static void main(String[] args) {
