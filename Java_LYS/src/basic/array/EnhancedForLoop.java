@@ -41,9 +41,10 @@ public class EnhancedForLoop {
 	         총점(int), 평균(double, 소수점 둘째 자리까지 출력)
 	         */
 			
-			int[] scores = {96, 88, 74, 63, 100, 55};
-			int total = 0;
 			
+			int[] scores = {96, 88, 74, 63, 100, 55};
+			
+			int total = 0;
 			for(int s : scores) {
 				total += s;
 			}

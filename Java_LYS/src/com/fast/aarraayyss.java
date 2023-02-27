@@ -98,12 +98,65 @@ public class aarraayyss {
 		  	
 		  
 		 
+		  	
+		  	
+		  	//배열의 활용
+		  	//최대값과 최소값 구하기
+		  	int[] score = {79, 88, 91, 33, 100, 55, 95};
+		  	
+		  	int max = score[0];	//배열의 첫 번째 값으로 최대값을 초기화함
+		  	int min = score[0]; //배열의 첫 번째 값으로 최소값을 초기화함
+		  	
+		  	for(int i=1; i<score.length; i++) {
+		  		if(score[i] > max) {
+		  			max = score[i];
+		  		} else if(score[i] < min) {
+		  			min = score[i];
+		  		}
+		  	}
 		
+		  	System.out.println("최대값 :" + max);
+		  	System.out.println("최소값 :" + min);
+		  	
+		  	
+		  	
+		  	
+		  	
+		  	
+		  	
+		  	
+		  System.out.println("------------------------------");
+		  
+		  
+		  //배열의 섞기
+		  int[] numArr = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+		  System.out.println(Arrays.toString(numArr));
+		  
+		  
+		  for (int i = 0; i < 100; i++) {
+			  int n = (int)(Math.random()*10);
+			  int tmp = numArr[0];
+			  numArr[0] = numArr[n];
+			  numArr[n] = tmp;
+			  
 		
-		
-		
-		
-		
+			  
+			  
+			  
+			  
+		  }
+		  	
+		  	
+		  	
+		  	
+		  	
+		  	
+		  	
+		  	
+		  	
+		  	
+		  	
+		  	
 		
 	}
 }
