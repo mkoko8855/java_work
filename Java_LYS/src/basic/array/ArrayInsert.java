@@ -23,8 +23,7 @@ public class ArrayInsert {
 		
 		for(int i = 0; i < names.length; i++) {
 			System.out.print("이름을 입력하세요 : ");
-			String name = sc.next();
-			
+			String name = sc.next();		
 			if(name.equals("그만")) {
 				System.out.println("입력을 종료합니다.");
 				break;

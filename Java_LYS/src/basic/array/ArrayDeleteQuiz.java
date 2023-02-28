@@ -9,7 +9,6 @@ public class ArrayDeleteQuiz {
 		/*
 		 * 1. 삭제할 친구를 입력 받아서 삭제를 진행 해 주세요. 2. 입력받은 이름이 없다면 없다고 얘기 해 주세요.
 		 */
-
 		Scanner sc = new Scanner(System.in);
 		String[] kakao = { "무지", "네오", "어피치", "라이언", "춘식이" };
 		System.out.println("현재 저장된 친구들 : " + Arrays.toString(kakao));
@@ -28,7 +27,7 @@ public class ArrayDeleteQuiz {
 				break; // 3. 브레이크 건다.
 			}
 		}
-
+		
 		// 이것 또한 탐색 과정이다.
 		if (!flag) { // flag==false? > false는 없다라는 거고 else는 있다.
 			System.out.println(name + "(은)는 이름이 없다.");

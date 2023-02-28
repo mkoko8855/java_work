@@ -35,6 +35,8 @@ public class EmployeeManager {
 		// 앞으로 한칸씩 땡기신 다음 count를 하나 내려주시면 됩니다.
 
 		// 사원의 정보 : 사번, 이름, 나이, 부서명
+		
+		
 		Scanner sc = new Scanner(System.in);
 
 		String[] userNums = new String[100]; // 사번
@@ -121,7 +123,55 @@ public class EmployeeManager {
 					System.out.println("등록이 안됐어요");
 				}
 			} else if (menu == 4) {
+				System.out.print("사번을 입력하세요: ");
+                String empNum = sc.next(); 
+                int modifyIdx = 0;
+                while(true) {
+                    boolean flag = false;
+                    for(int i=0; i<count; i++) { // 중복확인
+                        if(empNum.equals(userNums[i])) {
+                            flag = true;
+                            modifyIdx = i;
+                            break; 
+                        }
+                    }
 
+                    if(!flag) {
+                        System.out.println("존재하는 사번이 없습니다.");
+                        System.out.print("사번 재입력: ");
+                        empNum = sc.next();
+                    } else {
+                        break;
+                    }
+
+                }
+
+                while(true) {
+                    System.out.println("\n========== 사원정보 수정 ==============");
+                    System.out.println("# 1. 나이 변경");
+                    System.out.println("# 2. 부서 변경");
+                    System.out.println("# 3. 나가기");
+                    System.out.print("> ");
+                    int menu1 = sc.nextInt();
+                    if(menu1 == 1) {
+                        System.out.print("변경할 나이를 입력하세요: ");
+                        int reAge = sc.nextInt();
+                        ages[modifyIdx] = reAge;
+                        System.out.println("변경되었습니다.");
+
+                    } else if(menu1 == 2) {
+                        System.out.print("변경할 부서를 입력하세요: ");
+                        String reDepartment = sc.next();
+                        departments[modifyIdx] = reDepartment;
+                    } else if(menu1 == 3) {
+                        System.out.println(" 취소 ");
+
+                        break;
+                    } else {
+                        System.out.println("메뉴를 잘못 입력하셧습니다.");
+                    }
+
+                }
 			} else if (menu == 5) {
 				System.out.print("사번입력 > ");
                 String userNum = sc.next();
