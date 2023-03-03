@@ -107,10 +107,9 @@ public class MethodQuiz02 {
 	
 	public static void main(String[] args) {
 
-		printFood();
-		push("라면"); // 출력 결과 : [떡볶이, 치킨, 파스타, 라면, 김치찌개]
-		push("김치찌개"); // 출력 결과 : [떡볶이, 치킨, 파스타, 라면, 김치찌개]
-		printFood();
+		push("라면");  
+		push("김치찌개");  
+		printFood();	//출력 결과 : [떡볶이, 치킨, 파스타, 라면, 김치찌개]
 
 		
 		

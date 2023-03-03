@@ -130,7 +130,7 @@ public class MethodExample3 {
 	static void divide(int n1, int n2) {
 		//0으로 나눌 수 없으니 물어봐보자.
 		if(n2 == 0) {
-			System.out.println("0으로 나누시면 안돼요!");
+			System.out.println("0으로 나누시면 안돼요!"); //n2만 오게 할 수 없으니 강제로 끝내야 한다.
 			//break; continue; 
 			//밑 코드를 실행시키지 않으려 break나 continue를 쓰는데
 			//break는 반복문 밖에는 사용할 수 없다는 익셉션이 뜬다. 컨티뉴도 마찬가지.
