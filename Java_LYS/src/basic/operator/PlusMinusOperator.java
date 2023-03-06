@@ -12,7 +12,10 @@ public class PlusMinusOperator {
 		System.out.println("i의 값: " + i);
 		System.out.println("j의 값: " + j);
 		System.out.println("k의 값: " + k);
-		
+		//출력 결과 :
+		//i의 값: 1
+		//j의 값: 1
+		//k의 값: 2
 		
 		System.out.println("--------------------------");
 		

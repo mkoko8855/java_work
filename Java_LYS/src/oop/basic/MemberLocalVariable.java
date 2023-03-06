@@ -15,8 +15,7 @@ package oop.basic;
 		  주소값을 잃어버리게 되면, 메모리에서 가비지 컬렉터(gc)에 의해
 		  자동으로 제거됩니다.
 
-
-
+		 
 
 
 		 # 지역 변수 (local variable)

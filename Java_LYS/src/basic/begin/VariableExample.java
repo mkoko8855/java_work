@@ -17,8 +17,6 @@ public class VariableExample {
 		*/
 		
 		
-		
-		
 		//변수의 선언 : [자료형(데이터 타입)] [변수명];
 		int age;
 		
