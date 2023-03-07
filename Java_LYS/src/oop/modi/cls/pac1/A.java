@@ -9,7 +9,4 @@ package oop.modi.cls.pac1;
 class A {
 
 	B b = new B();     //B가 public이니까 객체 생성이 되는 것이다.
-	
-	
-	
 }

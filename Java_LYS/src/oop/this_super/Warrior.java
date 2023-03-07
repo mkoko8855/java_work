@@ -12,8 +12,6 @@ public class Warrior extends Player {
 		super(name);
 		//this.name = name; 얘 쓰지 말고 super() 에 넣자.
 		this.rage = 60;
-		
-		
 	}
 	
 	//결과
@@ -39,23 +37,10 @@ public class Warrior extends Player {
 	
 	
 	
-	
-	
-	
-	
-	
 	@Override
 
 	void characterInfo() {
 		super.characterInfo();
 		System.out.println("분노 : " + rage);
 	}
-	
-	
-	
-	
-	
-	
-	
-	
 }

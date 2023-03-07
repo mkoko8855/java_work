@@ -9,4 +9,9 @@
     <fullyQualifiedTypeName name="oop.basic.MemberLocalVariable"/>
     <fullyQualifiedTypeName name="oop.juice.Apple"/>
     <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="oop.overloading.MainClass"/>
+    <fullyQualifiedTypeName name="oop.modi.cls.pac1.B"/>
+    <fullyQualifiedTypeName name="oop.modi.constructor.pac1.A"/>
+    <fullyQualifiedTypeName name="oop.modi.member.pac1.A"/>
+    <fullyQualifiedTypeName name="oop.modi.protec.pac1.A"/>
 </qualifiedTypeNameHistroy>

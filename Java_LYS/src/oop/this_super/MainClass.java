@@ -137,5 +137,8 @@ public class MainClass {
 		
 		
 		
+		w1.attack(m1);    // 다형성 적용한 부분
+		m1.attack(h1);    // 다형성 적용한 부분
+		
 	}
 }

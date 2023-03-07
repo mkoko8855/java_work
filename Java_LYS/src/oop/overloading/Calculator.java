@@ -26,10 +26,6 @@ public class Calculator {
 	
 	
 	
-	
-	
-	
-	
 	//문제
 	/*
     - Calculator 클래스에 calcRectArea() 메서드를 선언하여

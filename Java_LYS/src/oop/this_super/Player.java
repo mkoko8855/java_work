@@ -43,7 +43,6 @@ public class Player {
 	}
 	
 	
-	
 	Player(String name){
 		this(); //이건 같은 클래스의 다른 생성자를 부르는 문법이다. 즉, 다른 생성자인 위의 기본생성자를 부를 수 있다. 메인클레스가서 실행 확인 해보자.
 		//출력 : 결과
@@ -56,16 +55,19 @@ public class Player {
 //		level = 1;
 //		atk = 3;       //this(); 확인하려고 잠깐 주석
 //		hp = 50;
-		
 		this.name = name;   //매개변수를 pname이라고 하고 name=pname 으로 해도 된다. 그런데 항상 이렇게 쓰는건 이상하잖아. this붙이자.
 							//누가 부르느냐에 따라 달라지는 것이 this이다.
-	}
+	}						
 	
 	
 	
 	//생성자 하나 더뽑아보자
 	Player(String name, int hp){
 		this(name);  //이 문법은 반드시 생성자의 최상단의 위치해야 한다. 즉, 다른 생성자의 호출은 생성자 내에서 최상단에 위치해야 한다.
+				     //이 this(name)이 전사2가 나와야 하는게 아니라 전사3을 받는다고 메인 메서드에 적었고,
+					 //Player(String name)의 값을 받되, Player(String name)이 객체는 또 this()로 인해 그 위의 기본 생성자로 간다.
+					 //기본 생성자를 부르고, 그 아래 String name을 또 부르고, 그 생명주기가 끝나고 다시 String name, int hp값을 받는 것이다.
+		
 		System.out.println("Player의 3번 생성자 호출!");
 		//this.name = name;   3번생성자가 받은 name값을 위로 써줘서 넘겨. 그럼 2번 생성자 name값은 3번 생성자 name 값이 들어간다.
 		this.hp = hp;

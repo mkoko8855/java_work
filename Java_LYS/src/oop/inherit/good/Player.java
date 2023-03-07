@@ -27,6 +27,4 @@ public class Player {
 		System.out.println("# 공격력 : " + atk);
 		System.out.println("# 체력 : " + hp);
 	}
-	
-	
 }

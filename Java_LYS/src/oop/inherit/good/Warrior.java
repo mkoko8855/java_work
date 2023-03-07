@@ -20,9 +20,6 @@ public class Warrior extends Player {
 	
 	
 	
-	
-	
-	
 	 /*
 	 
 	  	# 메서드 오버라이딩(재정의)
@@ -63,7 +60,7 @@ public class Warrior extends Player {
 	
 	
 			   // 위 는 잠깐 주석, 오버라이딩은 alt + shift + s 하면 편하게 할 수 있음(override/implemet methods를 누르고 선택하면 된다.)
-	@Override  //어노테이션은 기능이 있는 주석이다. 오버라이드 문법이 맞는지 체크해주는 간단한 기능이 있다. 
+	@Override  //어노테이션은 기능이 있는 주석이다. 오버라이딩 문법이 맞는지 체크해주는 간단한 기능이 있다. 
 			   //이걸보고 이 캐릭터인포 메서드는 부모가 물려준 거에서 새롭게 정의됐다는 걸 알 수 있다.
 	void characterInfo() {
 		super.characterInfo();

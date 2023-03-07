@@ -28,7 +28,6 @@ public class MyBirth {
 	 	  
 	 	  
 	 	  
-	 	  
 	 	  # setter method
 	 	  
 	 	  1. 세터는 숨겨진 변수에 값을 저장하기 위한 메서드 이다.
@@ -119,7 +118,7 @@ public class MyBirth {
 	
 	
 	
-	public int getYear(String pw) {  //안정장치 = 비밀번호
+	public int getYear(String pw) {  //안정장치로 비밀번호를 쓰게끔 적어놨음, 게터에선 대부분 유효성검증로직을 잘 사용 안함
 		if(pw.equals("abc1234")) {
 			return this.year;                       		//사실 이거 다 제끼고 return this.year; 만 써도 됨;; 어차피 세팅 잘못하면 0이 나오기 때문이다.
 		} else {
