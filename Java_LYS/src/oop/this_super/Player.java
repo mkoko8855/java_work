@@ -78,7 +78,7 @@ public class Player {
 	
 	
 	
-	void attack(Player target){
+	void attack(Player target){  //타입을 Player로 잡았다는 건 부모와 관련있는 자식 객체들이 다 전달된다. 즉, 워리어, 메이지와 헌터까지 다 들어올 수 있는, 의도치 않은 다형성을 적용시켰다.
 //		System.out.println("target : " + target);      메인에서의 출력 결과 : target : oop.this_super.Player@5e91993f
 //		System.out.println("this : " + this);		   메인에서의 출력 결과 : this : oop.this_super.Player@1c4af82c
 		
@@ -86,6 +86,8 @@ public class Player {
 			System.out.println("스스로는 때릴 수 없습니다.");
 			return;
 		}
+		
+		
 		
 		//출력 메세지를 이렇게 낼것이다.     x가 y를 공격하는 식의 로직을 짜봐라.
 		System.out.printf("%s가 %s를 공격합니다.\n", this.name, target.name );

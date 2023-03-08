@@ -43,9 +43,10 @@ public class Driver {
 	
 	
 	//이번엔 리턴 타입의 다형성이다.
+	
 	//차를 사는 메서드 선언해보자 (이번엔 리턴타입의 다형성이다)
 	//소나타와 포르쉐와 테슬라의 모두 같은 타입은 Car타입이잖아. 그래서 Car타입을 써줬다.
-	public Car buyCar(String name){
+	public Car buyCar(String name){ 
 		if(name.equals("소나타")) {
 			System.out.println("소나타를 구입합니다.");
 			return new Sonata(); 

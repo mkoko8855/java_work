@@ -1,7 +1,9 @@
-package quiz02;
+package chap2.quiz02;
 
 public class MainClass {
-	public MainClass() {
+
+	public static void main(String[] args) {
+
 		Car c = new Car("메르세데스 벤츠 AGM 1세대");
 
 		c.setSpeed(2000);

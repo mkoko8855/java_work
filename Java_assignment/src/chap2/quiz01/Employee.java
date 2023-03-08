@@ -1,4 +1,4 @@
-package quiz01;
+package chap2.quiz01;
 
 public class Employee extends Person {
 
@@ -7,6 +7,6 @@ public class Employee extends Person {
 	
 	public String info(){
 		String str1 = super.info();
-		return str1 + ", 부서 :" + departments;
+		return str1 + ", 부서: " + departments;
 	}
 }

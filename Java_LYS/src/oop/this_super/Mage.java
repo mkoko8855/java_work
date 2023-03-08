@@ -13,6 +13,7 @@ public class Mage extends Player {
 	}
 	
 	
+	
 	@Override
 	void characterInfo() {
 		super.characterInfo();

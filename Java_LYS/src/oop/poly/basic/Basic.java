@@ -19,39 +19,19 @@ package oop.poly.basic;
 
 
 class A{
-	
 }
-
-
-
 class B extends A{
-	
 }
-
-
 class C extends A{
-	
-	
-	
 }
-
-
-
 class D extends B{
-	
 }
-
-
 class E extends C{
-	
 }
-
 
 
 
 public class Basic {
-
-	
 	A a = new A();
 	B b = new B();
 	C c = new C();
