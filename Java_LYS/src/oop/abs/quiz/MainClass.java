@@ -19,16 +19,16 @@ public class MainClass {
         */
 		
 		
-		
-		Shape Circle = new Circle("원", 4);
-		Shape Rect = new Rect("정사각형", 5, 5);
-		System.out.println(Circle.getName());
-		System.out.println(Rect.getName());
+		Shape Circle = new Circle("원 ", 4);
+		Shape Rect = new Rect("직사각형 ", 5, 5);
+		System.out.print(Circle.getName());
 		System.out.println(Circle.getArea());
+		System.out.print(Rect.getName());
 		System.out.println(Rect.getArea());
 		
-		
-		
+		//출력 결과 :
+		//정보 : 원 50.24
+		//정보 : 정사각형 25.0
 		
 		
 		

@@ -18,4 +18,7 @@
     <fullyQualifiedTypeName name="oop.poly.car.Porsche"/>
     <fullyQualifiedTypeName name="oop.static_init.DBManager"/>
     <fullyQualifiedTypeName name="oop.static_singleton.Singleton"/>
+    <fullyQualifiedTypeName name="oop.abs.bad.SeoulStore"/>
+    <fullyQualifiedTypeName name="oop.abs.good.SeoulStore"/>
+    <fullyQualifiedTypeName name="oop.abs.good.HeadStore"/>
 </qualifiedTypeNameHistroy>

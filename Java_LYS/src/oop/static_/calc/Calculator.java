@@ -4,8 +4,6 @@ public class Calculator {
 
 	
 	
-	String color;
-	static double pi = 3.141592;
 	
 	 /*
 	 	 계산기마다 색깔이 각각 다를 수 있기 때문에 color같은 변수는
@@ -20,6 +18,8 @@ public class Calculator {
 	
 	
 	
+	String color;
+	static double pi = 3.141592;
 	
 	
 	

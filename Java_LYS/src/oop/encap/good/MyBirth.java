@@ -116,8 +116,6 @@ public class MyBirth {
 	 	   이름은 일반적으로 get + 멤버변수이름 으로 지정한다. (관례) 
 	 */
 	
-	
-	
 	public int getYear(String pw) {  //안정장치로 비밀번호를 쓰게끔 적어놨음, 게터에선 대부분 유효성검증로직을 잘 사용 안함
 		if(pw.equals("abc1234")) {
 			return this.year;                       		//사실 이거 다 제끼고 return this.year; 만 써도 됨;; 어차피 세팅 잘못하면 0이 나오기 때문이다.

@@ -1,9 +1,9 @@
-package oop.inter;
+package oop.inter.basic;
 
 //인터페이스는 클래스 와는 좀 다르다
 //인터페이스 선언할 때는 클래스 내부에 선언하는게 아니라 클래스와 별개다.
 //class를 지우고 interface 라고 적어주면 된다.
-public interface Inter {
+public interface Inter extends ParentInter {
 //인터페이스의 사전적인 개념은 객체의 규격(기능)을 표준화해서 명세하는 역할이다.
 //객체를 만들지 못하기에 어떠한 것도 쓰지 못한다는 것이다.
 	
@@ -15,17 +15,22 @@ public interface Inter {
 	
 			//인터페이스가 뭔지 알아보기 위해 멤버변수, 메서드, 생성자를 우리가 항상 선언하듯이 해보자.
 	
-	int n = 5;  //상수처럼 글씨가 굵다..? static final이 없는데..?
+	int NUM = 5;  //상수처럼 글씨가 굵다..? static final이 없는데..?
 	            //인터페이스에서 변수를 선언하면 상수(static final)로 지정이 된다.
 	
 	void method1();  //인터페이스에서 메서드를 선언하면 추상 메서드로 지정된다.
 					 //method1()에 빨간줄 긁힐 것이다. 추상 메서드로 의식을 했기 때문이다. 즉, 추상메서드처럼 중괄호 빼야됨
 	
-//	Inter(){		 //인터페이스는 생성자를 가질 수 없다..즉, 객체화 될 수 없는 개념이다.
+//	Inter(){		 //인터페이스는 생성자를 가질 수 없다..객체도 없다. 즉, 객체화 될 수 없는 개념이다.
 		
 //	}
 		
 	
+	
+	
+	public static void staticMethod() {   //이처럼 스태틱 메서드도 선언하는 것은 가능하다.
+		System.out.println("가능합니다.");
+	}
 	
 	
 	

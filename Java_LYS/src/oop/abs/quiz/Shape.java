@@ -26,11 +26,11 @@ public abstract class Shape {  //부모
 
 	
 	public String getName() {
-		return name;
+		return "도형 이름 :" + name;
 	}
 
 
-	public void setName(String name) {
-		this.name = name;
+	public void setName(String name) {   //근데 생성자를 만들었으니 생성자를 통해 입력 받을 거니 세터는 사실 필요 없다.
+		this.name = name;				 //대신 이름 바꿀 때는 세터가 무조건 필요하다는 것이다.
 	}
 }

@@ -15,6 +15,7 @@ public class Count {
 	
 	
 	
+	//static은 객체와는 무관!! 
 	
 	
 	

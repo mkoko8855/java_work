@@ -3,7 +3,6 @@ package oop.abs.quiz;
 public class Circle extends Shape {
 
 
-	double r;
 	/*
     - Shape를 상속받는 Circle과 Rect 클래스를 생성해 주세요.
     
@@ -15,16 +14,32 @@ public class Circle extends Shape {
      
     - MainClass에서 길이가 5인 정사각형,
       반지름이 4인 원의 모든 내용을 호출해 보세요.
-    */
+	 */
+	
+	private double r;
 	
 	
-	public Circle(String name, double r) {
+	public Circle(String name, double r) {   //부모인 shape에서 생성자가 없기 때문에 자식에서 해줘야 한다.
 		super(name);
 		this.r = r;
 	}
 
 	@Override
 	public double getArea() {
-		return r*r*3.14;
+		return r*r*Math.PI;
 	}
+
+	
+	
+	public double getR() {
+		return r;
+	}
+
+	public void setR(double r) {
+		this.r = r;
+	}
+	
+	
+	
+	
 }
