@@ -21,4 +21,12 @@
     <fullyQualifiedTypeName name="oop.abs.bad.SeoulStore"/>
     <fullyQualifiedTypeName name="oop.abs.good.SeoulStore"/>
     <fullyQualifiedTypeName name="oop.abs.good.HeadStore"/>
+    <fullyQualifiedTypeName name="oop.inter.basic.ParentInter"/>
+    <fullyQualifiedTypeName name="oop.inter.basic.ImplClass1"/>
+    <fullyQualifiedTypeName name="oop.inter.good.IUserService"/>
+    <fullyQualifiedTypeName name="java.lang.ArithmeticException"/>
+    <fullyQualifiedTypeName name="java.lang.ArrayIndexOutOfBoundsException"/>
+    <fullyQualifiedTypeName name="java.lang.NullPointerException"/>
+    <fullyQualifiedTypeName name="java.util.InputMismatchException"/>
+    <fullyQualifiedTypeName name="java.lang.Exception"/>
 </qualifiedTypeNameHistroy>

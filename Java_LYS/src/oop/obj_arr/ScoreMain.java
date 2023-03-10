@@ -22,9 +22,13 @@ public class ScoreMain {
 		Scanner sc = new Scanner(System.in);
 
 		for (int i = 0; i < scores.length; i++) {
+			System.out.println("학생 점수 입력 프로그램");
+			System.out.println("여러분, '그만'을 입력하시면 프로그램이 종료됩니다");
+
 			System.out.print("이름 : ");
 			String name = sc.next();
 			if (name.equals("그만")) {
+				System.out.println("입력을 종료합니다.");
 				break;
 			}
 			System.out.print("국어 : ");
@@ -39,12 +43,14 @@ public class ScoreMain {
 			int total = k + e + m;
 			double avg = total / 3.0;
 
-			Score score = new Score(name, k, e, m, total, avg);
-			scores[i] = score;
+			scores[i] = new Score(name, k, e, m, total, avg);
 		}
-		try {
+
+		try { 	//예외처리도 가능하지만 if문으로도 널포인트익셉션 방어가 가능하다.
 			for (Score I : scores) {
+				// if(I==null) break;
 				I.ScoreInfo();
+				System.out.println("-----------------------");
 			}
 		} catch (Exception e) {
 		}

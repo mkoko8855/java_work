@@ -20,7 +20,7 @@ public class ThrowsExample {
 	
 	static String[] greetings = {"안녕", "헬로", "니하오"};  //밑에 있는 메서드에서 바로 선언하려고 static으로했음
 	
-	static void greet(int idx) throws Exception {
+	static void greet(int idx) throws Exception { 
 		System.out.println(greetings[idx]);
 	}
 	

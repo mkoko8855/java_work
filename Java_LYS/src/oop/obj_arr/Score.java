@@ -68,6 +68,7 @@ public class Score {
 
 	
 	public Score(String name, int k, int e, int m, int total, double avg) {
+		super(); //있어도 되고 없어도됨. 
 		this.name = name;
 		this.k = k;
 		this.e = e;
