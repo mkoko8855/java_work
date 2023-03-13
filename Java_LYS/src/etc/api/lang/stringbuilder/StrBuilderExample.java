@@ -15,7 +15,7 @@ public class StrBuilderExample {
 		 왜 메모리를 과소비해? > String 객체는 처음 초기화된 데이터에 변화를 주어야 하는 상황에서
 		 기존 객체를 활용하지 않고 새로운 객체를 계속해서 생성한다.
 		 
-		 그래서 나온 애가 바로 StringBuilder, StringBuffer 라는 애들이다.
+		 그래서 나온 애가 바로 StringBuilder, StringBuffer 라는 애들이다. (사용법은 같다. 하나만 배우면 다른거하나 그대로 쓸 수 있음)
 		 
 		 기능은 같지만 사용하는 곳이 좀 다르다. (자바 5버전부터 사용 가능)
 		 

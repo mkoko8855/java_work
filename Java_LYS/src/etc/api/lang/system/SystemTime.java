@@ -4,6 +4,9 @@ public class SystemTime {
 
 	public static void main(String[] args) {
 		
+		//시스템클래스는 객체 없이 사용 가능.
+		
+		
 		//시스템 메서드
 		
 		long start = System.currentTimeMillis(); //리턴 타입은 long이다. long변수를 선언해줘야겠지
@@ -38,9 +41,6 @@ public class SystemTime {
 		
 		
 		System.exit(0);  //프로그램 종료
-		
-													
-		
 	}
 }
 

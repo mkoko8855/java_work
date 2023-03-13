@@ -70,6 +70,7 @@ public class WrapperExample {
 		
 		
 		String s2 = "3.14";
+		Integer.parseInt(s2);
 		//실수니까 더블.파스더블로 하면 실수로 변환 받겠지
 		//이걸 인티져.파스인트로 하면 예외가 터진다 (변환할 수 없단다)
 		//즉, 해당 타입으로 변환할 수 없는 문자열을 시도했을경우 NumberFormatException이라는 예외가 발생한다.

@@ -8,7 +8,13 @@ public class MainClass {
 		Person hong = new Person("홍길동", 24);
 //		park.personInfo();
 //		hong.personInfo();
-		
+		/*
+		 출력결과 :
+		 이름 : 박영희
+		 나이 : 25세
+		 이름 : 홍길동
+		 나이 : 24세
+		 */
 		
 		
 		//객체 타입의 변수를 출력하거나 값을 얻을 때에는 뒤에 자동으로 toString()이 붙어서 진행된다.
