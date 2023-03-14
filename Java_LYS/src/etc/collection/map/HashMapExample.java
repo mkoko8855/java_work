@@ -70,7 +70,7 @@ public class HashMapExample {
 		//Map 내부의 값을 참조하는 법 : get(key)
 		//containskey로 있는지 없는지 확인하고 get을 사용해야 null을 안받을 수 있다.
 		String name = "멍멍이";
-		if(map.containsKey(name)) {  //확인을 먼저 하는거를 매우 권장한다. 
+		if(map.containsKey(name)) {  //확인을 먼저 하는거를 매우 권장.
 			System.out.printf("%s의 별명을 가진 학생은 %s 입니다.\n", name, map.get(name));
 		} else {
 			System.out.println("그런 별명을 가진 학생은 없어요");
