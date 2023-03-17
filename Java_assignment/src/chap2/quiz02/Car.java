@@ -126,30 +126,36 @@ public class Car {
 	private char mode;
 	private boolean start;
 
-	Car(String model) {
+	public Car(String model) {
 		this.model = model;
-		System.out.println(model);
+		System.out.println("모델명 : " + model);
 	}
 
 	public void setSpeed(int speed) {
-		if (start == false) {
-			System.out.println("시동이 안걸려서 속도를 지정 할 수가 없어요");
-		} else {
-			if (mode != 'D' && mode != 'R') {
-				System.out.println("D나 R의 기어가 아니면 속도를 지정 할 수가 없어요");
-			}
-			if (speed < 0 || speed > 200) {
-				System.out.println("속도 조절 잘해주세요 0미만 200이상 일 순 없어요");
-			}
-			if (mode == 'R') {
-				if (speed > 40) {
-					System.out.println("R모드는 속도를 40 초과해서 지정할 수 없습니다.");
-				} else {
-					System.out.println("");
-				}
-			}
+		if (speed < 0 || speed > 200) {
+			System.out.println("잘못된 속도 입니다.");
+			return; // 메서드 강제 종료할 거임.
 		}
-		this.speed = speed;
+		// 엘스로 이어서 써도 되는데 굳이 쓸 필요는 없지.
+
+		// 시동을 걸고 속도를 올려야하니 시동 걸려있는지부터 start변수로 확인하자
+		// 같은 클래스이니 프라이빗은 제약이 없다. 바로 start변수로 확인하자.
+		if (!start) {
+			System.out.println("시동부터 먼저 거세요");
+			return; // 시동안걸면 강제종료
+		}
+
+		if (mode == 'D' || mode == 'R') {
+			if (mode == 'R' && speed > 40) {
+				System.out.println("후진은 속도를 40이상 낼 수 없어요");
+				return;
+			}
+			System.out.println("속도를 " + speed + " 로 맞춥니다."); //this.speed는 안됨. 객체가 갖고 있는 스피드를 출력해버리니..
+			this.speed = speed; // 이 코드를 실행 해야지만 값이 제대로 세팅된다.
+		} else {
+			System.out.println("변속기 위치를 확인하세요(기어 바꾸라고");
+			return;
+		}
 	}
 
 	public int getSpeed() {
@@ -157,50 +163,70 @@ public class Car {
 	}
 
 	public void setMode(char mode) {
-		this.mode = mode;
+		switch (mode) {
+		case 'D':
+		case 'R':
+		case 'N':
+		case 'P':
+			this.mode = mode;
+			break;
+
+		default:
+			this.mode = 'P'; //이상한 값 들어오면 전부다 P로 처리 해버리기
+		}
 	}
 
+	
+	
+	
 	public char getMode() {
 		return mode;
 	}
 
-	void engineStart() {
-		System.out.println("시동 버튼을 눌렀습니다.");
-		injectGasoline();
-		injectoil();
-		this.start = true;
-		moveCylinder();
-		System.out.println("시동이 걸렸습니다.");
+	
+	
+	//시동 버튼 누르는 행위
+	public void engineStart() {
+		System.out.println("시동 버튼을 눌렀습니다."); //시동 버튼!
+		injectoil(); //엔진오일주입
+		injectGasoline();  
+		this.start = true; //시동이 켜졌으니 start를 true로..객체를 생성하면 false니 true로 바꿔 준 것이다.
+		moveCylinder(); 
+		System.out.println("시동이 걸렸습니다."); //시동 켜졌으니 출력문까지 해주자.
 	}
 
-	void injectGasoline() {
+	private void injectGasoline() { //이 메서드를 작성하고, engineStart메서드에서 injectGasoline을 호출하면 된다.
 		System.out.println("연로가 엔진에 주입됩니다.");
 	}
 
-	void injectoil() {
+	private void injectoil() {  //시동 버튼을 누르지도 않았는데 엔진오일이 순환될 순 없잖아. 시동 버튼을 클릭 했을 때 시작되는 로직이기 떄문에 이런것들은 private으로 가려주자.
 		System.out.println("엔진오일이 순환 합니다.");
 	}
 
-	void moveCylinder() {
-		if (start == true) {
+	private void moveCylinder() { //실린더가 움직이는 것. > 이건 엔진오일을 넣고 시동을 건 후에 써야하니 private으로 선언.
+		if (start) { //시동이 켜져있으면 실린더가 움직이겠지? 불린 타입이니 start == ture 안써도됨
 			System.out.println("실린더가 움직입니다.");
 		} else {
 			System.out.println("실린더가 움직이지 않습니다.");
 		}
 	}
-
-	void engineStop() {
-		if (speed > 0) {
-			System.out.println("시동을 끌 수가 없어요");
-		} else if (speed != 0) {
+					//밖에서 호출 될 일은 없으니 private으로 바꿔준 모습들이다.
+	
+	
+	
+	public void engineStop() {   //시동을 끄는 기능
+		if (this.speed > 0) { //엔진스탑 메서드를 부른 객체의 스피드가 현재 0이상이냐? > 시동끄면안돼!        TIP: 이미 셋스피드에서 0미만을 거르기때문에 0보다 크냐만 확인하면 된다.
 			System.out.println("주행 중에는 시동을 끌 수가 없어요");
-		} else if (speed == 0) {
-			if (mode != 'P') {
-				System.out.println("기어를 P로 바꾸세요");
-			} else if (mode == 'P') {
-				System.out.println("시동 끕니다.");
-				start = false;
-			}
+			return; //0이라면 if문 나오겠지. 그 다음 변속기 모드 확인ㄱㄱ
+		} 
+		
+		if (this.mode != 'P') {  //모드가 P가 아니라면
+			System.out.println("변속기를 P모드로 변경하세요");   
+			return;										
+		} else {
+			//그럼 변경 해야겠지
+			this.start = false;
+			System.out.println("시동이 꺼졌습니다.");
 		}
 	}
 }
