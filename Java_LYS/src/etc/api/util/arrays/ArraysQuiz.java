@@ -38,7 +38,6 @@ public class ArraysQuiz {
 		String[] completion = { "홍길동", "김길동", "박영희", "김철수" };
 		
 		System.out.println(solution(participant, completion));
-
 	}
 }
 

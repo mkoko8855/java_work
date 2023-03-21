@@ -23,8 +23,8 @@ public class MyCart {
 		if (pro.price > money) { // 물건값이 주머니값보다 비싸니까
 			System.out.println("금액 부족");
 			return; //void는 리턴을 안쓰는데 강제종료용으로 사용 가능
-		} else { //비싸면 물건 살 것
-					// 물건의 가격을 money에서 빼고 add(상품)메서드 호출해야됨.
+		} else { //비싸면 물건을 사겠지
+				 //물건의 가격을 money에서 빼고 add(상품)메서드 호출해야됨.
 			money -= pro.price; // > money = money-pro.price; > 돈에서 물건값을 빼고 add호출
 			add(pro);
 		}
@@ -44,16 +44,21 @@ public class MyCart {
 	private void add(Product pro) {
 		if (i >= cart.length) {
 			// 기존의 장바구니보다 크기가 *2 큰 배열을 생성
-			Product pro2[] = new Product[i * 2];
-			for (int h = 0; h < cart.length; h++) {
+			Product pro2[] = new Product[i * 2]; //pro2라는 큰 배열을 하나 만들고
+			for (int h = 0; h < cart.length; h++) { //물건을 하나씩 담을꺼야
 				pro2[h] = cart[h];
 			}
-			cart = pro2; // cart는 새로운 장바구니
+			cart = pro2; // cart는 새로운 장바구니       //물건 담은 걸 cart로 넣기
 		}
-		cart[i] = pro;
+		cart[i] = pro;   //????????????? pro??
 		i++;
 	}
 	
+	/*
+	 * - 장바구니 안에 담긴 물건의 목록(name)을 출력합니다. - 장바구니 안에 담긴 물건의 가격을 모두 더해서 출력해야 합니다. - 남은
+	 * 금액을 출력해야 합니다.
+	 * - MyCart 선언이 완료되었다면 MainClass에서 buy메서드를 호출해 봅니다.
+	 */
 	
 	public void info() {
 		int sum = 0;
@@ -66,8 +71,3 @@ public class MyCart {
 	}
 }
 
-/*
- * - 장바구니 안에 담긴 물건의 목록(name)을 출력합니다. - 장바구니 안에 담긴 물건의 가격을 모두 더해서 출력해야 합니다. - 남은
- * 금액을 출력해야 합니다.
- * - MyCart 선언이 완료되었다면 MainClass에서 buy메서드를 호출해 봅니다.
- */
