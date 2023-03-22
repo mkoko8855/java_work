@@ -37,16 +37,19 @@ public class MainClass {
 		 * 그 후에, MyCart의 소지금을 적게 설정하여 금액이 부족할 시 물건이 담기지 않는지도 확인해 보세요.
 		 */
 
-		Product protv = new Tv();
-		Product proradio = new Radio();
-		Product procom = new Computer();
+		MyCart cart = new MyCart(2100);
+		
+		Tv tv = new Tv();
+		Radio radio = new Radio();
+		Computer com = new Computer();
+		
+//		Product protv = new Tv();
+//		Product proradio = new Radio();
+//		Product procom = new Computer();
 
-		MyCart start = new MyCart(2100);
-
-		start.buy(protv);
-		start.buy(proradio);
-		start.buy(procom);
-		start.info();
+		cart.buy(tv);
+		cart.buy(radio);
+		cart.buy(com);
 
 	}
 }

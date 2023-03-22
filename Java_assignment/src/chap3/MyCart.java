@@ -4,6 +4,9 @@ public class MyCart {
 
 	private int money;
 	private Product[] cart = new Product[1]; // 상품을 저장할 배열.
+	// 상품의 길이가 배열의 길이는 같지 않다는 것을 알아야 한다. 그래서 아래 i를 따로 선언해줬다.
+	// 왜냐? 배열은 길이를 늘리면 상품 하나씩 느는게 아니라 2배씩 길이가 늘어난다.
+
 	private int i = 0; // cart안에 있는 상품의 개수를 알려주는 변수.
 
 	// 객체 생성 시 money를 받아서 초기화.
@@ -18,18 +21,18 @@ public class MyCart {
 	 * money에서 빼고 add(상품)메서드 호출.
 	 */
 
-	public void buy(Product pro) {
+	public void buy(Product p) {
 
-		if (pro.price > money) { // 물건값이 주머니값보다 비싸니까
+		if (p.price > this.money) { // 물건값이 주머니값보다 비싸니까
 			System.out.println("금액 부족");
-			return; //void는 리턴을 안쓰는데 강제종료용으로 사용 가능
-		} else { //비싸면 물건을 사겠지
-				 //물건의 가격을 money에서 빼고 add(상품)메서드 호출해야됨.
-			money -= pro.price; // > money = money-pro.price; > 돈에서 물건값을 빼고 add호출
-			add(pro);
+			return; // void는 리턴을 안쓰는데 강제종료용으로 사용 가능
 		}
+
+		this.money -= p.price;
+		add(p);
+
 	}
-	
+
 	/*
 	 * - private void add(모든 상품을 받을 수 있도록 선언)
 	 * 
@@ -41,33 +44,45 @@ public class MyCart {
 	 * - 모든 로직이 완료되면 info() 메서드를 호출합니다.
 	 */
 
-	private void add(Product pro) {
-		if (i >= cart.length) {
-			// 기존의 장바구니보다 크기가 *2 큰 배열을 생성
-			Product pro2[] = new Product[i * 2]; //pro2라는 큰 배열을 하나 만들고
-			for (int h = 0; h < cart.length; h++) { //물건을 하나씩 담을꺼야
-				pro2[h] = cart[h];
+	private void add(Product p) {
+		if (i >= cart.length) {  //이게 true면 배열의 자리가 없다는 것, 즉. 없으면 새로운 장바구니를 만들어야겠지
+			Product[] temp = new Product[cart.length * 2]; //새로운 장바구니 생성(2배큰배열)
+			//기존 배열의 들어있는 상품을 새로운 배열에 옮기자
+			for(int n=0; n<cart.length; n++) {
+				temp[n] = cart[n];
 			}
-			cart = pro2; // cart는 새로운 장바구니       //물건 담은 걸 cart로 넣기
+			cart = temp;
+			temp = null;
 		}
-		cart[i] = pro;   //????????????? pro??
+		cart[i] = p;
 		i++;
+		
+		info();
 	}
-	
+
 	/*
 	 * - 장바구니 안에 담긴 물건의 목록(name)을 출력합니다. - 장바구니 안에 담긴 물건의 가격을 모두 더해서 출력해야 합니다. - 남은
-	 * 금액을 출력해야 합니다.
-	 * - MyCart 선언이 완료되었다면 MainClass에서 buy메서드를 호출해 봅니다.
+	 * 금액을 출력해야 합니다. - MyCart 선언이 완료되었다면 MainClass에서 buy메서드를 호출해 봅니다.
 	 */
-	
-	public void info() {
-		int sum = 0;
-		for (int j = 0; j < i; j++) {
-			System.out.println(cart[j].name);
-			sum += cart[j].price;
-		}
-		System.out.println("물건의 합계 금액은 > " + sum + " 원 입니다.");
-		System.out.println("남은 금액은 > " + money + " 원 입니다.");
-	}
-}
 
+	public void info() {
+		System.out.println("--------------------------");
+		System.out.println("***** 현재 장바구니 정보 *****");
+		
+		int sum=0; //총 상품의 합계를 담아줄 변수
+		
+		for(Product p : cart) {  //product  P타입이라는 것에 cart를 담아줄 것임
+			if(p==null) {
+				break;
+			}
+			System.out.print(p.name + " ");
+			sum += p.price;
+		}
+		
+		System.out.println();
+		System.out.println("구매 금액 합계 : " + sum + " 원");
+		System.out.println("남은 금액 : " + this.money + " 원");
+		
+	}
+	
+}

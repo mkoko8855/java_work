@@ -35,7 +35,7 @@ public class Point {
 	}
 
 	//1. 학생의 성적 정보를 입력할 메서드
-	public void inputPoints(Set<Integer> over) {
+	public void inputPoints(List<Student> sList) {
 
 		/*
 		 1. 학생 객체를 1개 생성합니다.
@@ -44,7 +44,7 @@ public class Point {
 		 4. 저장 완료 메세지를 호출하세요.
 		 ex) XXX님의 성적 정보가 정상적으로 입력되었습니다.
 		 */
-        List<Integer> slist = new ArrayList<>(over);
+        List<Student> slist = new ArrayList<>();
         System.out.println("성적 정보가 정상적으로 입력 되었습니다.");
 	}
 
