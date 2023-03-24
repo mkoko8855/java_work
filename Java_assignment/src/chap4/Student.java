@@ -16,7 +16,7 @@ public class Student {
 
 	private static Scanner sc = new Scanner(System.in);
 
-	public Student(String stuId, String name, int kor, int eng, int math, int total, double average, String grade) {
+	public Student() {
 		inputStuInfo();
 		calcTotAvgGrade();
 	}
