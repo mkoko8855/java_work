@@ -17,6 +17,7 @@ public class Student {
 	private static Scanner sc = new Scanner(System.in);
 
 	public Student() {
+		//객체가 생성 되자마자 바로 정보 입력을 진행합니다.
 		inputStuInfo();
 		calcTotAvgGrade();
 	}
@@ -37,13 +38,13 @@ public class Student {
 		*/	
 		while(true) {
 			try {
-				System.out.println("- 국어: ");
+				System.out.print("- 국어: ");
 				this.kor = sc.nextInt();
-				System.out.println("- 영어: ");
+				System.out.print("- 영어: ");
 				this.eng = sc.nextInt();
-				System.out.println("- 수학: ");
+				System.out.print("- 수학: ");
 			    this.math = sc.nextInt();
-			    
+			    break;
 			} catch (InputMismatchException e) {
 				System.out.println("정수를 제대로 입력 해주세요");
 				sc.nextLine();
@@ -52,6 +53,7 @@ public class Student {
 				sc.nextLine();
 			} catch (Exception e) {
 				System.out.println("알 수 없는 에러 입니다.");
+				sc.nextLine();
 			}
 		}
 	}
@@ -74,7 +76,7 @@ public class Student {
 	}
 	
 	// 학생의 성적 정보를 출력하는 메서드
-	public void outputStuInfo() {
+	public void outputStuInfo() {  /*7d라면 7칸의 공간을 차지하게끔. 즉, 깔끔하게 출력되게끔..만듬*/
 		System.out.printf("%4s %6s %6d점 %5d점 %7d점 %7d점 %7.2f점 %6s\n", this.stuId, this.name, this.kor, this.eng,
 				this.math, this.total, this.average, this.grade);
 	}
@@ -143,7 +145,7 @@ public class Student {
 		this.grade = grade;
 	}
 
-	public static void close() {
+	public static void close() { /*스캐너는 딱 공유되는 한개만! 사용하겠다는것*/
 		sc.close();
 	}
 

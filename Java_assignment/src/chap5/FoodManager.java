@@ -28,7 +28,20 @@ public class FoodManager {
 				 * - 메뉴명과 가격을 입력받아서 Map에 삽입하시면 됩니다. 이미 존재하는 메뉴명이 들어왔다면 '이미 존재하는 메뉴입니다.' 를 출력하시고
 				 * 메인 메뉴로 돌아와 주세요. - 메뉴 등록 완료 후 'XXX 메뉴가 등록되었습니다.' 를 출력하세요.
 				 */
-
+			System.out.println("메뉴를 입력 해 주세요");
+			String order = sc.next();
+			
+			if(foods.containsKey(order)) {
+				System.out.println("이미 존재하는 메뉴입니다.");
+				continue;
+			} 
+			System.out.println("가격을 입력 해 주세요");
+			int price = sc.nextInt();
+			foods.put(order, price);
+			System.out.println(order + "가 " + price + "원에 등록 되었습니다.");
+				
+				
+				
 			} else if (menu == 2) {
 				/*
 				 * - 만약 메뉴가 하나도 등록되어 있지 않다면 '메뉴부터 먼저 등록해 주세요!' 출력 후 메인 메뉴로 이동시켜 주세요.
@@ -42,7 +55,14 @@ public class FoodManager {
 				 * 
 				 * - 취소: 메인 메뉴로 이동
 				 */
-
+				
+				
+				
+				
+				
+				
+				
+				
 			} else if (menu == 3) {
 				/*
 				 * - Y / N를 입력받아서 Y가 입력되면 프로그램 종료. 그 이외의 값은 종료 취소를 진행해 주세요.
