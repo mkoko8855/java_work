@@ -21,7 +21,7 @@ public class ScannerExample {
 		
 		System.out.print("이름을 입력하세요 : ");
 		String name = sc.next();
-		System.out.println(name);
+		//System.out.println(name);
 		
 		System.out.print("나이를 입력하세요 : ");
 		int age = sc.nextInt();

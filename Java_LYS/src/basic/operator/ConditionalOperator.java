@@ -56,6 +56,8 @@ public class ConditionalOperator {
 		//177-34 = 만큼 곱하고 마지막에 34만큼 덜주기
 		
 		
+		//48~260까지의 정수 난수를 발생시키고 싶어요!
+	
 		
 		
 	}

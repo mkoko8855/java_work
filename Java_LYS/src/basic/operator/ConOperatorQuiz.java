@@ -10,6 +10,13 @@ public class ConOperatorQuiz {
 		 3항 연산식으로 출력해 보세요
 		 */
 		
+	
+		
+		
+		
+		
+		
+		
 		int random = (int)((Math.random()*355+42));
 		System.out.println("발생한 난수 : " + random);
 		

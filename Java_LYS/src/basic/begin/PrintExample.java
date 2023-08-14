@@ -29,6 +29,8 @@ public class PrintExample {
 		System.out.print("안녕히 가세요ㅜㅜ");
 		System.out.println("bye bye");
 		
+		
+		
 		int month = 12;
 		int day = 25;
 		String anni = "크리스마스";
@@ -37,6 +39,11 @@ public class PrintExample {
 		
 		System.out.println(month + "월 " + day + "일은 " + anni + " 입니다.");
 		System.out.printf("%d월 %d일은 %s입니다.\n", month, day, anni);
+		System.out.printf("%d월 %d일은 %s입니다.", month, day, anni);
+		 /*
+		    12월 25일은 크리스마스 입니다.
+	    	12월 25일은 크리스마스입니다. 
+		 */
 		
 		
 		//실수를 표현하는 서식문자 %f
