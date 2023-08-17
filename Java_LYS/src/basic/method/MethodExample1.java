@@ -37,15 +37,13 @@ public class MethodExample1 {   //여긴 선언 가능
 	} //1~n까지의 누적합 계산
 	
 	
-	
-	
-	
-	
-	
+		
 	public static void main(String[] args) {  //메인메서드 안에서 다른 메서드 선언 불가
 											  //메서드의 호출은 다른 메서드나 생성자 내부에서만 가능합니다.
 											  //return은 55라는 값은 메인메서드의 clacTotal(10)으로 리턴된다.
-											 
+										
+		
+		
 		//메인에서 clacTotal을 불러보자
 		int total = clacTotal(10);   //함수의 호출 부분임. 메서드가 원하는 타입의 값을 전달해주자. 리턴값을 보관해서 호출하자.
 									 //즉, 10은 위의 int x가 받는 다는 것이다.

@@ -33,7 +33,7 @@ public class MethodExample2 {
 		
 //		if(start > end) {
 //			int temp = start;
-//			start = end;               27~31번 줄은 x와 y값을 바꾸는 코드다.
+//			start = end;                x와 y값을 바꾸는 코드다.
 //			end = temp;
 //		}
 		

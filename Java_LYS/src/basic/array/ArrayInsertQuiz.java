@@ -32,6 +32,7 @@ public class ArrayInsertQuiz {
 				System.out.println("음식 이름 입력 창을 닫습니다.");
 				break;
 			}
+			
 			for (int j = 0; j <= i; j++) { 
 				//입력을 받은 음식이 배열 안에 있는 음식과 같은가를 판별해주는 안쪽for문시작
 				if(foodnames.equals(foods[j])) { //음식이름이 같으면

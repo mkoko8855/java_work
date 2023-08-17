@@ -10,6 +10,16 @@ public class ForExample {
 		/*
 		 * 1~10까지의 누적합 (와일문과 포문)
 		 */
+		int first = 1;
+		int total10 = 0;
+		while(first <= 10) {
+			total10 += first;
+			first++;
+		}
+		System.out.println(total10);
+		
+		System.out.println("-----------------------------------------------LINE");
+		
 		
 		int b = 1;
 		int total = 0;
@@ -35,12 +45,19 @@ public class ForExample {
 
 		System.out.println();        //출력 결과 : 55
 
+		System.out.println("---------------------------------------------^^-------");
+
+		
+		int firstfirst = 0;
+		for(int i=1; i<=10; i++) {
+			firstfirst += i;
+		}
+		System.out.println(firstfirst);
 		
 		
 		
-		
-		
-		
+		System.out.println("--------------------------------------------ㅁㅁ-------");
+
 		
 		// 1~200 까지의 정수 중 6의 배수이면서
 		// 12의 배수는 아닌 수를 가로로 출력해보세요

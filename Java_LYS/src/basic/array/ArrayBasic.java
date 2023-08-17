@@ -53,9 +53,9 @@ public class ArrayBasic {
 		arr[3] = 5;
 		arr[4] = 100;
 		//arr[5] = 77;  // index 범위를 초과함.
-		System.out.println("arr 배열의 길이 : " + arr.length);   //출력 결과 6
+		System.out.println("arr 배열의 길이 : " + arr.length);   //출력 결과 5
 		
-		
+		System.out.println("------------------------------------------------");
 		
 		
 		//5. 배열의 저장된 값을 사용해보자. (참조하는 법)
@@ -90,7 +90,7 @@ public class ArrayBasic {
 			
 		//7. 배열 내부의 요소값을 문자열 형태로 한눈에 출력하기
 		System.out.println(Arrays.toString(arr));   //배열 내부를 문자열로 출력해줌
-			
+		//출력 결과 : [65, 88, 65, 5, 100]
 		
 		
 		
