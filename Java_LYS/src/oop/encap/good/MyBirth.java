@@ -46,7 +46,8 @@ public class MyBirth {
 	
 	
 	
-	//year라는 멤버변수에 값을 저장하고 싶으면 직접 접근하지 말고 setYear을 통해서 값 전달을 하자, 정확하면 넣고 아니면 안넣으면 되는 것이다.
+	//year라는 멤버변수에 값을 저장하고 싶으면 직접 접근하지 말고 
+	//setYear을 통해서 값 전달을 하자, 정확하면 넣고 아니면 안넣으면 되는 것이다.
 	public void setYear(int year) {
 		
 		if(year < 1900 || year > 2023) {

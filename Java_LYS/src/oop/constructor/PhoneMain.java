@@ -6,7 +6,6 @@ public class PhoneMain {
 		
 		
 		Phone basic = new Phone();   
-		
 		//basic.model = "폴더폰";
 		//basic.color = "회색";
 		//basic.price = 200000;  	  10~13번째 줄은 객체를 일일이 값을 넣어줬다.  이제 편하게 생성자를 호출하자. 

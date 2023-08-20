@@ -49,9 +49,9 @@ public class Phone {
 	//자 그럼 생성자 설명을 했으니 선언 해보자 , 메서드와 비슷하지만 다른 점은 리턴 타입이 없다.
 	
 	Phone(){    // > 기본 생성자
-		System.out.println("기본 생성자가 호출 되었습니다. 라는 확인 문구를 한번 넣어보았습니다.");
+		System.out.println("기본 생성자가 호출 되었습니다. 라는 확인 문구를 한번 넣어보았습니다! 이게 첫번째로 호출될까요");
 		model = "폴더폰";
-		color = "회식";
+		color = "회색";
 		price = 200000;
 	}
 	
@@ -59,15 +59,7 @@ public class Phone {
 	
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	/*  갤럭시23을 주문받았는데 내용이 똑같다..폴더폰,회식,200000원.. 이것도 바꿔야겠지?
+	/*  갤럭시23을 주문받았는데 내용이 똑같다..폴더폰,회색,200000원.. 이것도 바꿔야겠지?
 	 	생성자 오버로딩(중복 선언)
 	 	
 	 	1. 생성자는 중복해서 여러 개 선언할 수 있다.
@@ -77,7 +69,7 @@ public class Phone {
 	 	3. 
 	 */
 	Phone(String phoneModel){   //일부러 매개변수에 매개값을 집어넣었다. 왜? 중복을 인정받는 조건 중 하나를 따라야하니까 
-		System.out.println("2번 생성자 호출!");
+		System.out.println("2번 생성자 호출! 2번이에요 2번!");
 		model = phoneModel;
 		color = "화이트";
 		price = 1000000;
@@ -85,7 +77,7 @@ public class Phone {
 	
 	//2. 단, 생성자의 매개변수의 타입, 개수, 순서 중 하나가 달라야 중복을 인정한다.  < 기억해
 	Phone(String phoneModel, String pColor){
-		System.out.println("3번 생성자 호출!");
+		System.out.println("3번 생성자 호출! 3번이에요 3번!");
 		model = phoneModel;
 		color = "울트라그레이";
 		price = 1200000;
@@ -100,10 +92,11 @@ public class Phone {
 	
 	
 	void showSpec() {
-		System.out.println("*** 핸드폰의 정보를 출력해줍니다. ***");
+		System.out.println("*** 핸드폰의 정보를 출력해줍니다. ㅎㅎ***");
 		System.out.println("모델명 : " + model);
 		System.out.println("색상 : " + color);
 		System.out.println("가격 : " + price + "원");
+		System.out.println("----------------------------------");
 		
 		
 		
