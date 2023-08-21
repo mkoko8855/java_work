@@ -29,7 +29,7 @@ class D extends B{
 class E extends C{
 }
 
-
+//위는 B는 A보다 작고, C도 A보다 작지만, A보다 작은 B는 D보다는 크고, A보다 작은 C는 E보다 크다
 
 public class Basic {
 	A a = new A();
@@ -46,7 +46,7 @@ public class Basic {
 	
 	 /*
 	  	다형성이란?
-	  	자식 객체가 모든 부모이 타입을 가질 수 있다는 것을 의미한다.
+	  	자식 객체가 모든 부모의 타입을 가질 수 있다는 것을 의미한다.
 	  	
 	  	즉, 부모 타입 변수에 자식 객체의 주소 값을 얼마든지 저장할 수 있다는 것이다.
 	 */

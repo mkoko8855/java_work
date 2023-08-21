@@ -4,7 +4,7 @@ public class Player {
 
 	
 	 /*
-	 	# 얘가 바로 즉, Player 클래스가 바로 부모 클래스, 상위 클래스(Parent, super class) 라고 한다.
+	 	# Player 클래스가 바로 부모 클래스, 상위 클래스(Parent, super class) 라고 한다.
 	 	
 	  - 데이터를 다른 클래스에게 상속하는 클래스를 부모 클래스라고 부른다.
 	  

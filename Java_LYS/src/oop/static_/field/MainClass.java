@@ -43,7 +43,7 @@ public class MainClass {
 		//정적 변수 c1.b : 20
 		//정적 변수 c2.b : 20
 		//정적 변수 c3.b : 20
-		
+
 		
 		
 		
